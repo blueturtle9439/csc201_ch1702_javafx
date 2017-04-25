@@ -62,12 +62,10 @@ public class Main extends Application {
 
                 try {
 
-                    BufferedWriter fw = new BufferedWriter(new FileWriter(fileName, true));
+                    FileOutputStream fw = new FileOutputStream(fileName, true);
                     fw.write(txt);
-                    fw.flush();
-                    fw.close();
 
-                } catch (Exception e1) {
+                } catch (IOException e1) {
                     e1.printStackTrace();
                 }
 
